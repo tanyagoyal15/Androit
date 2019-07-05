@@ -27,7 +27,8 @@ export default class Navbar extends Component {
     		this.props.history.push("/");
 		})
 		.catch((error) => {
-			console.log(error);
+			// console.log(error);
+			{alert(error.code)}
 		});
 	}
 
@@ -38,15 +39,16 @@ export default class Navbar extends Component {
 					<h5 className="grey-text text-darken-3">Log In</h5>
 					<div className="input-field">
 						<label htmlFor="email">Email</label>
-						<input type="email" value={this.state.email} id="email" onChange={this.handleChange} />
+						<input type="email" value={this.state.email} id="email" onChange={this.handleChange} required/>
 					</div>
 					<div className="input-field">
 						<label htmlFor="password">Password(min 6 length)</label>
-						<input type="password" value={this.state.password} id="password" onChange={this.handleChange} />
+						<input type="password" value={this.state.password} id="password" onChange={this.handleChange} required/>
 					</div>
 					<div className="input-field">
 						<button className="btn pink lighten-1 z-depth-0">Login</button>
 					</div>
+					<p>New User? <a href="/signup">Go to SignUp</a></p>
 				</form> 
 			</div>
 		);

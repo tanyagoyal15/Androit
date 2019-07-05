@@ -1,6 +1,5 @@
 import React , {Component} from 'react'
 import {NavLink} from 'react-router-dom'
-import { logout } from './Navbar'
 import fire from '../config/FirebaseConfig'
 
 export default class SignedIn extends Component{

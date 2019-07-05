@@ -28,7 +28,8 @@ export default class Navbar extends Component {
     		this.props.history.push("/");
 		})
 		.catch((error) => {
-			console.log(error);
+			// console.log(error);
+			{alert(error.code)}
 		})
 	}
 
@@ -56,6 +57,7 @@ export default class Navbar extends Component {
 					<div className="input-field">
 						<button className="btn pink lighten-1 z-depth-0">Signup</button>
 					</div>
+					<p>Already A User? <a href="/login">Go to Login</a></p>
 				</form>
 			</div>
 		);
